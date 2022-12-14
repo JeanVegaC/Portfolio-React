@@ -1,0 +1,56 @@
+.nav {
+    position: relative;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.nav .logo {
+    width: 200px;
+}
+
+.nav .ul-links {
+    display: flex;
+    justify-content: center;
+    /* width: 50%; */
+}
+
+.nav .li-link {
+    font-family: 'Roboto';
+}
+
+.nav .li-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 120px;
+    color: #F3EFE0;
+}
+
+/* ACTIVES */
+
+.nav .link-active a {
+    color: #22A39F;
+}
+
+.nav .li-link a::before,
+.nav .li-link a::after {
+    transition: width .5s;
+    width: 0;
+    content: "";
+    position: relative;
+    height: 3px;
+    border-radius: 1rem;
+    background-color: #22A39F;
+    margin: 0 5px;
+}
+
+.nav .link-active a::before,
+.nav .link-active a::after {
+    width: 10%;
+}
