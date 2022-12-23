@@ -175,3 +175,9 @@
         left: 5px;
     }
 }
+
+@media screen and (max-width:800px){
+    .nav{
+        height: 60px;
+    }
+}

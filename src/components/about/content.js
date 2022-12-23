@@ -6,11 +6,20 @@ import Figure5 from '../../assets/svg/figure-5.svg';
 import HeaderSection from "../shared/headerSection";
 
 export default function Content() {
+    
+
+    // useEffect(() => {
+    //     console.log('asdads');
+    // }, [window.screen]);
+
     useEffect(() => {
+
         const options = {
             // treshold: 1,
-            rootMargin: "-150px",
+            rootMargin: "-140px",
         };
+
+        // if(window.screen.width<500) options.rootMargin = '-140px';
 
         const observer = new IntersectionObserver(setClassFocus, options);
         const sectionABout = document.getElementById("about");

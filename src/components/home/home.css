@@ -113,6 +113,9 @@
 
 @media screen and (max-width:800px){
 
+    .home{
+        height: calc(100vh - 60px);
+    }
 
     .home .content{
         /* overflow: hidden; */
@@ -125,8 +128,12 @@
         right: 0;
         overflow: hidden;
         width: 100%;
+        height: 100%;
     }
 
+    .home .content .profile img{
+        height: initial;
+    }
 
     .home .content .presentation{
         z-index: 15;

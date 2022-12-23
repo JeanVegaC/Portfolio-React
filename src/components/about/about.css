@@ -213,11 +213,18 @@
     }
 
     .about .container .info{
+        height: 30%;
         width: 100%;
         text-align: center;
+        padding: 0 5px;
     }
 
     .about .container .info ul{
         justify-content: center;
+    }
+
+    .about .container .img{
+        height: 70%;
+        width: 100%;
     }
 }
