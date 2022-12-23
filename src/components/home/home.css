@@ -20,50 +20,11 @@
 .home h1 {
     font-family: 'Roboto';
     font-size: 6rem;
+    /* text-shadow: 2.5px 3px 3px #fff; */
     color: var(--color-second);
-}
-
-
-/* .home h2{
-    display: inline;
-    width: 19ch;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid var(--color-white);
-    padding-right: 5px;
-    animation: mecanografy 2.5s steps(19) infinite alternate-reverse,
-    blink .5s infinite step-end alternate;
-    letter-spacing: 3px;
-    font-family: monospace !important;
+    text-shadow: 2.5px 3px 1px #fff;
     
-} */
-
-/* .home h2 span{
-    position: absolute;
-    background-color: var(--color-black) ;
-    background-color: red;
-    border-left: 2px solid var(--color-black) ;
-    white-space: nowrap;
-    animation: mecanografy 5s infinite alternate steps(18);
-    right: 0;
-} */
-
-/* @keyframes mecanografy {
-    0%{
-        width: 0;
-    }    
-    100%{
-        width: 20ch;
-    }
 }
-
-@keyframes blink {
-    50%{
-        border-color: #000;
-    }
-    
-} */
-
 
 .home h2,
 .home p,
@@ -145,5 +106,44 @@
     10%{
         opacity: 1;
         filter: brightness(1.6) blur(10px);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:800px){
+
+    .main{
+    }
+    .home{
+    }
+    
+    .home .content{
+        /* overflow: hidden; */
+        flex-direction: column;
+    }
+
+    .home .content .profile{
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    .home .content .presentation{
+        z-index: 15;
+    }
+}
+
+@media screen and (max-width:390px){
+    .home .content .profile img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        object-fit: cover;
     }
 }

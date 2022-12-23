@@ -5,13 +5,10 @@ import Cv from "../../assets/pdf/CVJheanVega.pdf";
 import Typed from 'typed.js';
 
 export default function Content() {
-const [onlyOne, setOnlyOne] = useState(true);
 const refSpan = useRef();
 
 
 useEffect(() => {
-    if(onlyOne){
-        console.log('asd')
         refSpan.innerHTML = '';
         const typed = new Typed(refSpan.current,{
             strings:['Frontend Developer', 'Autodidact'],
@@ -22,8 +19,6 @@ useEffect(() => {
             showCursor:true,
             loop:true
         })
-        setOnlyOne(false);
-    }
     
 },[]);
 

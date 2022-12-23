@@ -9,11 +9,18 @@
   --color-white-dark: #F3EFE0;
 
   --color-second: #22A39F;
+
+  --font-roboto: 'Roboto';
+  --font-poppins: 'Poppins';
+
+  --text-size-title: 1.5rem;
+  --text-size-simple: 1rem;
 }
 
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul{
@@ -27,4 +34,8 @@ a{
 img{
   /* height: 100%; */
   /* width: 100%; */
+}
+
+html{
+  scroll-behavior: smooth;
 }

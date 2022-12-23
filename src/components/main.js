@@ -5,9 +5,10 @@ import './main.css'
 export default function Main() {
 
     return (
-        <main className="main">
+        <main className="main" id='Home'>
             <Nav></Nav>
             <Home></Home>
+            <About></About>
             <About></About>
             <div className="asda">
                 HOLI

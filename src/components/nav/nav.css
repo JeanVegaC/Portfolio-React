@@ -7,6 +7,7 @@
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 40;
 }
 
 .nav .logo {
@@ -53,4 +54,124 @@
 .nav .link-active a::before,
 .nav .link-active a::after {
     width: 10%;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:1024px) {
+    /* .ul-links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 0;
+        right: 0;
+        align-items: end;
+        gap: 1rem;
+        width: 300px;
+        background-color: red;
+    } */
+
+    .nav.show-nav>.ul-links .li-link {
+        right: 10px;
+    }
+
+    .li-link {
+        position: fixed;
+        height: 40px;
+        background-color: var(--color-black-second);
+        border-radius: 1rem;
+        width: 140px;
+        padding: 5px 10px;
+        right: -200px;
+        transition: right 0.5s;
+    }
+
+    .li-link:nth-child(1){
+        bottom: 10px;
+        transition-delay: .1s;
+    }
+    .li-link:nth-child(2){
+        bottom: 60px;
+        transition-delay: .2s;
+    }
+    .li-link:nth-child(3){
+        bottom: 110px;
+        transition-delay: .3s;
+    }
+    .li-link:nth-child(4){
+        bottom: 170px;
+        transition-delay: .4s;
+    }
+    .li-link:nth-child(5){
+        bottom: 230px;
+        transition-delay: .5s;
+    }
+
+
+    .nav-btn {
+        position: fixed;
+        background-color: red;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .burger {
+        position: relative;
+        margin: 15px;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .burger input {
+        display: none;
+    }
+
+    .burger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: var(--color-white);
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+    }
+
+    .burger input:checked~span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+    }
+
+    .burger input:checked~span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .burger input:checked~span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+        left: 5px;
+    }
 }

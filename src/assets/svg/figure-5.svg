@@ -1,0 +1,42 @@
+
+  <svg
+    width="1000"
+    height="1000"
+    viewBox="0 0 1000 1000"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      
+      
+      
+      
+      
+      <pattern
+        id="pattern"
+        patternUnits="userSpaceOnUse"
+        width="45"
+        height="45"
+        viewBox="0 0 100 100"
+        fill="#e6e6e6"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="12.5"
+        />
+      </pattern>
+      
+      <clipPath id="shape">
+        <path fill="currentColor" d="M822.5,617.5Q688,735,557.5,777Q427,819,263.5,755.5Q100,692,116,507.5Q132,323,267,197Q402,71,558,151.5Q714,232,835.5,366Q957,500,822.5,617.5Z"></path>
+      </clipPath>
+    </defs>
+  
+    
+
+    <g  clip-path="url(#shape)">
+      <path fill="url(#pattern)" d="M822.5,617.5Q688,735,557.5,777Q427,819,263.5,755.5Q100,692,116,507.5Q132,323,267,197Q402,71,558,151.5Q714,232,835.5,366Q957,500,822.5,617.5Z" />
+    </g>
+
+    
+  
+  </svg>

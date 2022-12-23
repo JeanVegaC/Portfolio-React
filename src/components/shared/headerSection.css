@@ -1,0 +1,30 @@
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: var(--text-size-title);
+    font-family: var(--font-poppins);
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+}
+
+header h1::before,
+header h1::after {
+    content: "";
+    width: 0;
+    position: relative;
+    height: 2px;
+    border-radius: 1rem;
+    background-color: var(--color-second);
+    margin: auto 15px;
+    transition: width .9s;
+}
+
+.focus header h1::before,
+.focus header h1::after {
+    width: 90%;
+}
