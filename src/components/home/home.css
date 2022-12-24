@@ -6,6 +6,7 @@
 
 .home .content {
     display: flex;
+    height: 100%;
 }
 
 .home .presentation {
@@ -15,6 +16,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 100%;
 }
 
 .home h1 {
@@ -107,6 +109,9 @@
         opacity: 1;
         filter: brightness(1.6) blur(10px);
     }
+    100%{
+        filter: brightness(1) blur(0);
+    }
 }
 
 /* RESPONSIVE DESIGN */
@@ -149,4 +154,11 @@
         top: 0;
         object-fit: cover;
     }
+
+    /* .home .content{
+        height: 100%;
+    }
+    .home .content .presentation{
+        height: 100%;
+    } */
 }

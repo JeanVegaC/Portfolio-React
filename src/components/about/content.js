@@ -1,16 +1,77 @@
 import { useEffect, useState } from "react";
-import {AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin} from "react-icons/ai";
+import { AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin } from "react-icons/ai";
 import About from "../../assets/svg/About.svg";
-import Figure4 from '../../assets/svg/figure-4.svg';
-import Figure5 from '../../assets/svg/figure-5.svg';
+import Figure4 from '../../assets/svg/figure-6.svg';
+import Figure5 from '../../assets/svg/figure-7.svg';
 import HeaderSection from "../shared/headerSection";
 
 export default function Content() {
-    
+
+    // let tmp = window.scrollY;
+
+    //     document.addEventListener('scroll', (e) => {
+
+    //         if(tmp != window.scrollY){
+    //             console.log('Scrolling');
+
+    //         }else{
+    //             console.log('Is stop');
+    //         }
+    //         tmp = window.scrollY;
+
+    //     })
 
     // useEffect(() => {
-    //     console.log('asdads');
-    // }, [window.screen]);
+
+    //     const stopAnimation = ()=>{
+    //         console.log('is stop');
+    //             figure.classList.remove('scrolling');
+    //     }
+    //     const figure = document.getElementById('figure')
+    //     document.addEventListener('scroll',(e)=>{
+    //         figure.classList.add('scrolling');
+    //         setTimeout(async () => {
+    //             await stopAnimation();
+    //         }, 1000);
+
+    //     })
+
+    // }, []);
+
+    useEffect(() => {
+
+        const figures = document.querySelectorAll('.figure');
+        console.log(figures);
+        function scrollStop(callback, refresh = 66) {
+
+            // Make sure a valid callback was provided
+            if (!callback || typeof callback !== 'function') return;
+
+            // Setup scrolling variable
+            let isScrolling;
+
+            // Listen for scroll events
+            window.addEventListener('scroll', function (event) {
+
+                figures[0].classList.add('scrolling');
+                figures[1].classList.add('scrolling');
+
+
+                // Clear our timeout throughout the scroll
+                window.clearTimeout(isScrolling);
+
+                // Set a timeout to run after scrolling ends
+                isScrolling = setTimeout(callback, refresh);
+
+            }, false);
+
+        }
+
+        scrollStop(function () {
+                    figures[0].classList.remove('scrolling');
+                    figures[1].classList.remove('scrolling');
+        });
+    }, []);
 
     useEffect(() => {
 
@@ -18,8 +79,6 @@ export default function Content() {
             // treshold: 1,
             rootMargin: "-140px",
         };
-
-        // if(window.screen.width<500) options.rootMargin = '-140px';
 
         const observer = new IntersectionObserver(setClassFocus, options);
         const sectionABout = document.getElementById("about");
@@ -35,7 +94,7 @@ export default function Content() {
 
     return (
         <div className="content">
-            <HeaderSection section={'About'}/>
+            <HeaderSection section={'About'} />
             <div className="container">
                 <div className="img">
                     <img src={About}></img>
@@ -64,8 +123,9 @@ export default function Content() {
                     </ul>
                 </div>
             </div>
-            <img src={Figure4} className="figure"></img>
+            <img src={Figure4} className="figure" id="figure"></img>
             <img src={Figure5} className="figure"></img>
         </div>
+
     );
 }
