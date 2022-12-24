@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import { AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin } from "react-icons/ai";
+import {
+    AiFillGithub,
+    AiOutlineWhatsApp,
+    AiFillLinkedin,
+} from "react-icons/ai";
 import About from "../../assets/svg/About.svg";
-import Figure4 from '../../assets/svg/figure-6.svg';
-import Figure5 from '../../assets/svg/figure-7.svg';
+import Figure4 from "../../assets/svg/figure-6.svg";
+import Figure5 from "../../assets/svg/figure-7.svg";
 import HeaderSection from "../shared/headerSection";
 
 export default function Content() {
-
     // let tmp = window.scrollY;
 
     //     document.addEventListener('scroll', (e) => {
@@ -39,42 +42,39 @@ export default function Content() {
     // }, []);
 
     useEffect(() => {
-
-        const figures = document.querySelectorAll('.figure');
+        const figures = document.querySelectorAll(".figure");
         console.log(figures);
         function scrollStop(callback, refresh = 66) {
-
             // Make sure a valid callback was provided
-            if (!callback || typeof callback !== 'function') return;
+            if (!callback || typeof callback !== "function") return;
 
             // Setup scrolling variable
             let isScrolling;
 
             // Listen for scroll events
-            window.addEventListener('scroll', function (event) {
+            window.addEventListener(
+                "scroll",
+                function (event) {
+                    figures[0].classList.add("scrolling");
+                    figures[1].classList.add("scrolling");
 
-                figures[0].classList.add('scrolling');
-                figures[1].classList.add('scrolling');
+                    // Clear our timeout throughout the scroll
+                    window.clearTimeout(isScrolling);
 
-
-                // Clear our timeout throughout the scroll
-                window.clearTimeout(isScrolling);
-
-                // Set a timeout to run after scrolling ends
-                isScrolling = setTimeout(callback, refresh);
-
-            }, false);
-
+                    // Set a timeout to run after scrolling ends
+                    isScrolling = setTimeout(callback, refresh);
+                },
+                false
+            );
         }
 
         scrollStop(function () {
-                    figures[0].classList.remove('scrolling');
-                    figures[1].classList.remove('scrolling');
+            figures[0].classList.remove("scrolling");
+            figures[1].classList.remove("scrolling");
         });
     }, []);
 
     useEffect(() => {
-
         const options = {
             // treshold: 1,
             rootMargin: "-140px",
@@ -94,19 +94,21 @@ export default function Content() {
 
     return (
         <div className="content">
-            <HeaderSection section={'About'} />
+            <HeaderSection section={"About"} />
             <div className="container">
                 <div className="img">
                     <img src={About}></img>
                 </div>
                 <div className="info">
                     <p>
-                        My name is Jhean Carlos Vega Casimiro, i'm ingenier of Sistem and
-                        study web developer, i'm from Perú and i'm 20 years old
+                        Hello how are you! My name is Jean Carlos Vega Casimiro, I am 19
+                        years old and I am a FrontEnd developer, I am currently studying
+                        systems engineering, I am also a self-taught student and I am
+                        looking to participate in projects with you
                     </p>
                     <ul className="ul-social">
                         <li>
-                            <a href="https://www.facebook.com">
+                            <a href="https://github.com/JeanVegaC">
                                 <AiFillGithub className="icon" title="JeanVegaC" />
                             </a>
                         </li>
@@ -126,6 +128,5 @@ export default function Content() {
             <img src={Figure4} className="figure" id="figure"></img>
             <img src={Figure5} className="figure"></img>
         </div>
-
     );
 }

@@ -164,7 +164,7 @@
 .about .container .info {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 5px;
     width: 40%;
     z-index: 20;
 }
@@ -178,13 +178,13 @@
 .about .container .info ul {
     display: flex;
     height: 50px;
-    gap: 1rem;
+    gap: 2rem;
     font-size: 1.6rem;
 }
 
 .about .container .info ul li .icon {
     height: 80%;
-    width: 80%;
+    width: 100%;
     color: var(--color-black-light);
     cursor: pointer;
     transition: transform .2s;
@@ -226,7 +226,7 @@
     }
 
     .about .container .img {
-        height: 70%;
+        height: 30%;
         width: 100%;
     }
 }
