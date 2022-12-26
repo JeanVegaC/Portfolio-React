@@ -1,0 +1,175 @@
+.skills {
+    display: flex;
+    align-items: start;
+    background-color: var(--color-black);
+    height: 100vh;
+}
+
+.skills .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.skills .ul-cards{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.skills .ul-cards .li-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-second);
+    min-width: 300px;
+    max-width: 30%;
+    border-radius: 1rem;
+}
+
+.skills .ul-cards .li-card header{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    font-size: var(--font-size-subtitle);
+    align-items: center;
+    color: var(--color-white-dark);
+}
+
+.skills .ul-cards .li-card .icon{
+    font-size: 6rem;
+    margin-top: 4rem;
+    color: var(--color-white-dark);
+}
+
+.skills .ul-cards .li-card:nth-child(1) header:after{
+    content: attr(data-card);
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: .350;
+}
+.skills .ul-cards .li-card:nth-child(2) header:after{
+    content: attr(data-card);
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: .350;
+}
+.skills .ul-cards .li-card:nth-child(3) header:after{
+    content: attr(data-card);
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: .350;
+}
+
+.skills .ul-cards .li-card .ul-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 1rem;
+}
+
+.skills .ul-cards .li-card .ul-skills .li-skill{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    /* background-color: green; */
+}
+
+/* SKILL TITLE */
+.skills .ul-cards .li-card .ul-skills .li-skill span:nth-child(1){
+    text-align: center;
+    min-width: 85px;
+}
+
+/* SKILL NIVEL */
+.skills .ul-cards .li-card .ul-skills .li-skill span:nth-child(3){
+    width: 100%;
+    text-align: center;
+    min-width: 90px;
+}
+
+.li-card .ul-skills .li-skill .bars{
+    width: 100%;
+    min-width: 120px;
+    height: 15px;
+    display: flex;
+    /* justify-content: space-between; */
+    position: relative;
+    background-color: var(--color-second);    
+    z-index: 1;
+}
+
+.li-card .ul-skills .li-skill .bars::before{
+    content: " ";
+    position: absolute;
+    right: 0;
+    filter: opacity(.425);
+    background-color: var(--color-black);
+    width: 98px;
+    height: 15px;
+    z-index: 2;
+    border-radius: 1rem;
+    transition: width .5s;
+}
+
+.li-card .ul-skills .li-skill .bars div:nth-child(odd){
+    height: 15px;
+    min-width: 15px;
+    background-color: var(--color-second-light);
+}
+
+.li-card .ul-skills .li-skill .bars div:nth-child(even){
+    height: 15px;
+    min-width: 11.25px;
+    background-color: var(--color-second);
+    z-index: 3;
+}
+
+.li-card .ul-skills .li-skill .bars div:first-child{
+    border-radius: 1rem 0 0 1rem;
+}
+.li-card .ul-skills .li-skill .bars div:last-child{
+    border-radius: 0 1rem 1rem 0;
+}
+
+.li-card .ul-skills .li-skill .fill-bar-1.bars::before{
+    transition: width .5s steps(0);
+    width: 98px;
+}
+.li-card .ul-skills .li-skill .fill-bar-2.bars::before{
+    transition: width .5s steps(1);
+    width: 75px;
+}
+.li-card .ul-skills .li-skill .fill-bar-3.bars::before{
+    transition: width .5s steps(2);
+    width: 45px;
+}
+.li-card .ul-skills .li-skill .fill-bar-4.bars::before{
+    transition: width .5s steps(3);
+    width: 24px;
+    
+}
+.li-card .ul-skills .li-skill .fill-bar-5.bars::before{
+    transition: width .5s steps(4);
+    width: 0;
+}

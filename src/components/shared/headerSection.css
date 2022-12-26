@@ -3,7 +3,7 @@ header {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-    font-size: var(--text-size-title);
+    font-size: var(--font-size-title);
     font-family: var(--font-poppins);
 }
 

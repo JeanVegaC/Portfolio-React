@@ -1,45 +1,11 @@
 import { useEffect, useState } from "react";
-import {
-    AiFillGithub,
-    AiOutlineWhatsApp,
-    AiFillLinkedin,
-} from "react-icons/ai";
+import {AiFillGithub, AiOutlineWhatsApp, AiFillLinkedin,} from "react-icons/ai";
 import About from "../../assets/svg/About.svg";
 import Figure4 from "../../assets/svg/figure-6.svg";
 import Figure5 from "../../assets/svg/figure-7.svg";
 import HeaderSection from "../shared/headerSection";
 
 export default function Content() {
-    // let tmp = window.scrollY;
-
-    //     document.addEventListener('scroll', (e) => {
-
-    //         if(tmp != window.scrollY){
-    //             console.log('Scrolling');
-
-    //         }else{
-    //             console.log('Is stop');
-    //         }
-    //         tmp = window.scrollY;
-
-    //     })
-
-    // useEffect(() => {
-
-    //     const stopAnimation = ()=>{
-    //         console.log('is stop');
-    //             figure.classList.remove('scrolling');
-    //     }
-    //     const figure = document.getElementById('figure')
-    //     document.addEventListener('scroll',(e)=>{
-    //         figure.classList.add('scrolling');
-    //         setTimeout(async () => {
-    //             await stopAnimation();
-    //         }, 1000);
-
-    //     })
-
-    // }, []);
 
     useEffect(() => {
         const figures = document.querySelectorAll(".figure");

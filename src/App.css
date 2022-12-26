@@ -9,12 +9,15 @@
   --color-white-dark: #F3EFE0;
 
   --color-second: #22A39F;
+  --color-second-light: #35e2dc;
+  --color-second-hover: #12726f;
 
   --font-roboto: 'Roboto';
   --font-poppins: 'Poppins';
 
-  --text-size-title: 1.5rem;
-  --text-size-simple: 1rem;
+  --font-size-title: 1.5rem;
+  --font-size-subtitle: 1.25rem;
+  --font-size-normal: 1rem;
 }
 
 *{
@@ -32,8 +35,8 @@ a{
 }
 
 img{
-  /* height: 100%; */
-  /* width: 100%; */
+  height: 100%;
+  width: 100%;
 }
 
 html{

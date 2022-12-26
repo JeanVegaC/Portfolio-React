@@ -116,7 +116,7 @@
 
 /* RESPONSIVE DESIGN */
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1024px){
 
     .home{
         height: calc(100vh - 60px);

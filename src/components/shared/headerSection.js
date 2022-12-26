@@ -1,5 +1,5 @@
 import './headerSection.css';
-export default function headerSection({ section }) {
+export default function HeaderSection({ section }) {
     return (
         <header>
             <h1>{section}</h1>
