@@ -3,6 +3,7 @@ import Home from "./home/home";
 import About from './about/about';
 import Skills from './skills/skills';
 import './main.css'
+import Projects from './projects/projects';
 export default function Main() {
 
     return (
@@ -11,7 +12,7 @@ export default function Main() {
             <Home></Home>
             <About></About>
             <Skills></Skills>
-            {/* <Skills></Skills> */}
+            <Projects></Projects>
             <div className="asda">
                 HOLI
             </div>

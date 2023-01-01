@@ -5,16 +5,16 @@
     height: 100vh;
 }
 
-.skills .content {
+.skills > .content {
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
+    flex-direction: column;
     gap: 1rem;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .skills .ul-cards{
@@ -23,13 +23,13 @@
     /* background-color: red; */
     gap: 1rem;
     flex-wrap: wrap;
-
 }
 
 .skills .ul-cards .li-card{
     display: flex;
     flex-direction: column;
     background-color: var(--color-second);
+    max-height: 410px;
     min-width: 300px;
     max-width: 30%;
     border-radius: 1rem;
@@ -51,30 +51,12 @@
     color: var(--color-white-dark);
 }
 
-.skills .ul-cards .li-card:nth-child(1) header:after{
+.skills .ul-cards .li-card header:after{
     content: attr(data-card);
     position: absolute;
     top: 0;
     right: 3%;
-    font-size: 4rem;
-    font-weight: 700;
-    opacity: .350;
-}
-.skills .ul-cards .li-card:nth-child(2) header:after{
-    content: attr(data-card);
-    position: absolute;
-    top: 0;
-    right: 3%;
-    font-size: 4rem;
-    font-weight: 700;
-    opacity: .350;
-}
-.skills .ul-cards .li-card:nth-child(3) header:after{
-    content: attr(data-card);
-    position: absolute;
-    top: 0;
-    right: 3%;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     opacity: .350;
 }
@@ -95,10 +77,12 @@
     /* background-color: green; */
 }
 
+
 /* SKILL TITLE */
 .skills .ul-cards .li-card .ul-skills .li-skill span:nth-child(1){
     text-align: center;
     min-width: 85px;
+    font-size: .9rem;
 }
 
 /* SKILL NIVEL */
@@ -106,6 +90,7 @@
     width: 100%;
     text-align: center;
     min-width: 90px;
+    font-size: .9rem;
 }
 
 .li-card .ul-skills .li-skill .bars{
@@ -125,11 +110,11 @@
     right: 0;
     filter: opacity(.425);
     background-color: var(--color-black);
-    width: 98px;
+    width: 100%;
     height: 15px;
     z-index: 2;
     border-radius: 1rem;
-    transition: width .5s;
+    /* transition: width .5s steps(0); */
 }
 
 .li-card .ul-skills .li-skill .bars div:nth-child(odd){
@@ -153,23 +138,144 @@
 }
 
 .li-card .ul-skills .li-skill .fill-bar-1.bars::before{
-    transition: width .5s steps(0);
+    transition: width .5s steps(1);
     width: 98px;
 }
 .li-card .ul-skills .li-skill .fill-bar-2.bars::before{
-    transition: width .5s steps(1);
+    transition: width .5s steps(2);
     width: 75px;
 }
 .li-card .ul-skills .li-skill .fill-bar-3.bars::before{
-    transition: width .5s steps(2);
+    transition: width .5s steps(3);
     width: 45px;
 }
 .li-card .ul-skills .li-skill .fill-bar-4.bars::before{
-    transition: width .5s steps(3);
+    transition: width .5s steps(4);
     width: 24px;
     
 }
 .li-card .ul-skills .li-skill .fill-bar-5.bars::before{
-    transition: width .5s steps(4);
+    transition: width .5s steps(5);
     width: 0;
+}
+
+/* STUDIES */
+
+/* .studies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;    
+
+}
+
+.studies .content{
+    border-radius: 1rem;
+    width: 92%;
+    height: 92%;
+}
+
+.studies .content nav .ul-studies{
+    display: flex;
+    gap: 1rem;
+}
+
+.studies .content nav .ul-studies .li-study{
+    border-bottom: 1px solid var(--color-second);
+    background-color: var(--color-second-hover);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 5px 10px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    cursor: pointer;
+}
+.studies .content nav .ul-studies .li-study:nth-child(1){
+    border-bottom: none;
+    background-color: var(--color-second);
+}
+
+.studies .info{
+    background-color: var(--color-second);
+    height: 80%;
+    width: 100%;
+} */
+
+.studies{
+    width: 100%;
+    height: 100%;
+}
+
+.studies .ul-studies{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.studies .ul-studies .li-study{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background-color: var(--color-second);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.studies .ul-studies .li-study span{
+    width: 100%;
+    text-align: center;
+}
+
+.studies .ul-studies .li-study .icon{
+    font-size: 1.4rem;
+}
+
+.studies .ul-studies .li-study:hover{
+    animation: brightness .5s;
+}
+
+@keyframes brightness {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    10%{
+        opacity: 1;
+        filter: brightness(1.6) blur(10px);
+    }
+    100%{
+        filter: brightness(1) blur(0);
+    }
+}
+
+.studies .ul-studies .li-study:hover span{
+    position: relative;
+    visibility: hidden;
+}
+
+.studies .ul-studies .li-study:hover span::after{
+    content: attr(data-span);
+    visibility: visible;
+    position: absolute;
+    bottom: 0px;
+    left: 22px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:955px){
+    .skills{
+        height: 150vh;
+    }
+}
+
+@media screen and (max-width:635px){
+    .skills{
+        height: 190vh;
+    }
 }

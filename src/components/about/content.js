@@ -9,7 +9,6 @@ export default function Content() {
 
     useEffect(() => {
         const figures = document.querySelectorAll(".figure");
-        console.log(figures);
         function scrollStop(callback, refresh = 66) {
             // Make sure a valid callback was provided
             if (!callback || typeof callback !== "function") return;
