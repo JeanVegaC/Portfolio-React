@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 import './nav.css'
-
-
 
 export default function Nav() {
     const [showNav, setShowNav] = useState(false);
@@ -16,8 +13,6 @@ export default function Nav() {
         setShowNav(false);
     }
     
-
-
     useEffect(() => {
         const nav = document.querySelector('.nav');
         
@@ -29,7 +24,7 @@ export default function Nav() {
     }, [showNav]);
 
     return (
-        <nav className="nav">
+        <nav className="nav" id='nav'>
             <div className="logo">Jhean Carlos</div>
             <ul className="ul-links">
                 <li className="li-link link-active" onClick={handleLinkNav}>

@@ -8,6 +8,8 @@
     position: sticky;
     top: 0;
     z-index: 40;
+    opacity: 1;
+    animation: brightness .5s;
 }
 
 .nav .logo {
@@ -54,6 +56,30 @@
 .nav .link-active a::before,
 .nav .link-active a::after {
     width: 10%;
+}
+
+.fixed{
+    position: fixed;
+    animation: brightness-2 .5s;
+}
+
+@keyframes brightness {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes brightness-2 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .burger {

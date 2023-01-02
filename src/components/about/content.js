@@ -10,6 +10,7 @@ export default function Content() {
     useEffect(() => {
         const figures = document.querySelectorAll(".figure");
         function scrollStop(callback, refresh = 66) {
+
             // Make sure a valid callback was provided
             if (!callback || typeof callback !== "function") return;
 
@@ -22,6 +23,9 @@ export default function Content() {
                 function (event) {
                     figures[0].classList.add("scrolling");
                     figures[1].classList.add("scrolling");
+
+                    document.getElementById('nav').classList.remove('fixed');
+                    document.getElementById('home').classList.remove('margin');
 
                     // Clear our timeout throughout the scroll
                     window.clearTimeout(isScrolling);
@@ -36,6 +40,8 @@ export default function Content() {
         scrollStop(function () {
             figures[0].classList.remove("scrolling");
             figures[1].classList.remove("scrolling");
+            document.getElementById('nav').classList.add('fixed');
+            document.getElementById('home').classList.add('margin');
         });
     }, []);
 
@@ -52,9 +58,20 @@ export default function Content() {
 
     const setClassFocus = (entries) => {
         const entry = entries[0];
+        // const Home = document.getElementById("home");
+        // const Nav = document.getElementById("nav");
+        
+        // !entry.isIntersecting && Home.classList.add("margin");
+        // entry.isIntersecting && Home.classList.add("margin");
+
+        // !entry.isIntersecting && Nav.classList.add("fixed");
+        // entry.isIntersecting && Nav.classList.add("fixed");
+
         const About = document.getElementById("about");
         !entry.isIntersecting && About.classList.remove("focus");
         entry.isIntersecting && About.classList.add("focus");
+
+        
     };
 
     return (
