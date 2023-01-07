@@ -2,6 +2,7 @@ import Nav from './nav/nav';
 import Home from "./home/home";
 import About from './about/about';
 import Skills from './skills/skills';
+import Contact from './contact/contact';
 import './main.css'
 import Projects from './projects/projects';
 export default function Main() {
@@ -13,9 +14,7 @@ export default function Main() {
             <About></About>
             <Skills></Skills>
             <Projects></Projects>
-            <div className="asda">
-                HOLI
-            </div>
+            <Contact></Contact>
         </main>
     )
 }
