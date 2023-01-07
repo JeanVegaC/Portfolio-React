@@ -7,7 +7,7 @@ import Projects from './projects/projects';
 export default function Main() {
 
     return (
-        <main className="main" id='Home'>
+        <main className="main" id='#'>
             <Nav></Nav>
             <Home></Home>
             <About></About>

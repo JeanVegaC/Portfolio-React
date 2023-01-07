@@ -237,7 +237,7 @@
 }
 
 .studies .ul-studies .li-study:hover{
-    animation: brightness .5s;
+    animation: brightness .5s ease-in-out;
 }
 
 @keyframes brightness {
@@ -247,7 +247,7 @@
     }
     10%{
         opacity: 1;
-        filter: brightness(1.6) blur(10px);
+        filter: brightness(1.4) blur(6px);
     }
     100%{
         filter: brightness(1) blur(0);

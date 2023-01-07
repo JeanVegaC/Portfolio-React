@@ -1,15 +1,15 @@
 .nav {
-    position: relative;
     background-color: var(--color-black);
     display: flex;
     justify-content: space-between;
     height: 80px;
     width: 100%;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 0px;
     z-index: 40;
     opacity: 1;
     animation: brightness .5s;
+    transition: top ease-in-out 1s;
 }
 
 .nav .logo {
@@ -22,7 +22,7 @@
     /* width: 50%; */
 }
 
-.nav .li-link {
+.nav .li-link a{
     font-family: 'Roboto';
 }
 
@@ -58,29 +58,29 @@
     width: 10%;
 }
 
-.fixed{
+/* .fixed{
     position: fixed;
     animation: brightness-2 .5s;
-}
+} */
 
 @keyframes brightness {
     0%{
-        opacity: 1;
+        opacity: 0;
     }
     100%{
-        opacity: 0;
+        opacity: 1;
     }
     
 }
 
-@keyframes brightness-2 {
+/* @keyframes brightness-2 {
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
-}
+} */
 
 .burger {
     display: none;
