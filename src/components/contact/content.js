@@ -26,7 +26,7 @@ if(message){
     business.current.setAttribute('style','color:rgb(34,34,34)');
     addressee.current.querySelectorAll('span')[0].innerHTML = 'Para';
     addressee.current.querySelectorAll('span')[1].hidden = false;
-    messageText.current.innerHTML = message.message;
+    messageText.current.innerHTML = message.message || 'Here goes your message';
 }
 }, [message]);
 
@@ -77,7 +77,7 @@ if(message){
                             <span>Asunto</span>
                         </div>
                         <div className="message">
-                            <p ref={messageText}>Here is the message</p>
+                            <p ref={messageText}>Here goes your message</p>
                         </div>
                         <div className="buttons">
                             <ul className="ul-buttons">

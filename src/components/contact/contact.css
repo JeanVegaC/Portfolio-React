@@ -33,7 +33,7 @@
     width: 50%;
     background-color: var(--color-white);
     border-radius: .5rem;
-    height: 75%;
+    /* min-height: 70%; */
     font-size: .875rem;
 }
 
@@ -61,8 +61,8 @@
 }
 
 .message-preview .message-body{
-    padding: 0 1rem;
-    height: 80%;
+    padding: 0 1rem 1rem 1rem;
+    min-height: 100%;
 }
 
 .message-preview .addressee{
@@ -129,7 +129,7 @@
     row-gap: .5rem;
     align-items: center;
     flex-wrap: wrap;
-
+    align-self: flex-end;
 }
 
 .message-preview .ul-buttons .li-button{
@@ -141,6 +141,23 @@
     width: 30px;
 }
 
+@media screen and (max-width: 560px) {
+    .contact .container{
+        flex-direction: column;
+    }
+
+    .contact .message-preview{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .contact .message-preview{
+        width: 100%;
+    }
+}
+
+/* FORM */
 
 
 
@@ -196,6 +213,18 @@
     align-items: center;
     gap: 1rem;
     width: 50%;
+    position: relative;
+}
+
+.container .ul-inputs::before{
+    content: 'Write me';
+    position: absolute;
+    top: 0;
+    font-size: 5rem;
+    opacity: .225;
+    font-family: var(--font-poppins);
+    text-align: center;
+    color: var(--color-second);
 }
 
 .container .li-input {
