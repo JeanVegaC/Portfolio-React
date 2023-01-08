@@ -59,7 +59,9 @@ export default function Content() {
         !entry.isIntersecting && About.classList.remove("focus");
         entry.isIntersecting && About.classList.add("focus");
 
-        
+
+
+    
     };
 
     return (

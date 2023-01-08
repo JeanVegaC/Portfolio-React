@@ -3,8 +3,9 @@ import Home from "./home/home";
 import About from './about/about';
 import Skills from './skills/skills';
 import Contact from './contact/contact';
-import './main.css'
 import Projects from './projects/projects';
+import Footer from './footer/footer';
+import './main.css'
 export default function Main() {
 
     return (
@@ -15,6 +16,7 @@ export default function Main() {
             <Skills></Skills>
             <Projects></Projects>
             <Contact></Contact>
+            <Footer></Footer>
         </main>
     )
 }

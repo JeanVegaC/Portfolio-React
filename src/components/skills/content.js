@@ -21,18 +21,14 @@ export default function Content() {
     const setClassFocusSection = (entries) => {
         const entry = entries[0];
         const Skills = document.getElementById("skills");
-        // const Home = document.getElementById("home");
-        // const Nav = document.getElementById("nav");
-        
-        // !entry.isIntersecting && Home.classList.remove("margin");
-        // entry.isIntersecting && Home.classList.add("margin");
-
-        // !entry.isIntersecting && Nav.classList.remove("fixed");
-        // entry.isIntersecting && Nav.classList.add("fixed");
         
         !entry.isIntersecting && Skills.classList.remove("focus");
         entry.isIntersecting && Skills.classList.add("focus");
 
+        document.querySelectorAll('.li-link')
+        .forEach(e => { e.classList.remove('link-active') })
+    document.querySelectorAll('.li-link')[2].classList.add('link-active');
+    document.getElementById('burger').checked = false;
         
     };
 

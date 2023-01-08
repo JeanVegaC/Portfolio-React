@@ -39,6 +39,7 @@ if(message){
         const observer = new IntersectionObserver(setClassFocus, options);
         const sectionContact = document.getElementById("contact");
         sectionContact && observer.observe(sectionContact);
+
     }, []);
 
     const setClassFocus = (entries) => {
