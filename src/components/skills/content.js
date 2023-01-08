@@ -24,11 +24,6 @@ export default function Content() {
         
         !entry.isIntersecting && Skills.classList.remove("focus");
         entry.isIntersecting && Skills.classList.add("focus");
-
-        document.querySelectorAll('.li-link')
-        .forEach(e => { e.classList.remove('link-active') })
-    document.querySelectorAll('.li-link')[2].classList.add('link-active');
-    document.getElementById('burger').checked = false;
         
     };
 

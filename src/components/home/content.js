@@ -22,15 +22,12 @@ export default function Content() {
 
         let ubicacionPrincipal = window.pageYOffset;
 
-
-
-
-
         /* --evento scroll */
         window.addEventListener("scroll", function () {
 
             let desplazamientoActual = window.pageYOffset;
-            if (ubicacionPrincipal <= 500) {
+
+            if (ubicacionPrincipal <= 500 && ubicacionPrincipal > 0) {
                 document.querySelectorAll('.li-link')
                     .forEach(e => { e.classList.remove('link-active') })
                 document.querySelectorAll('.li-link')[4].classList.add('link-active');
