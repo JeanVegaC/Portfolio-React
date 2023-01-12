@@ -36,7 +36,8 @@ export default function ModalProject({ id, setShowModal }) {
             ],
             images: [LibraryLogin,
                 LibrarySearch,
-                LibraryCrud]
+                LibraryCrud],
+            url: "https://biblioteca-react-nu.vercel.app/"
         },
         {
             id: 2,
@@ -51,7 +52,8 @@ export default function ModalProject({ id, setShowModal }) {
             images: [AnimeDirectory,
                 AnimeEmision,
                 AnimeNotices,
-                AnimePresentation]
+                AnimePresentation],
+            url: "https://page-anime-ajax.vercel.app/"
         },
         {
             id: 3,
@@ -69,7 +71,8 @@ export default function ModalProject({ id, setShowModal }) {
                 PokedexAbout,
                 PokedexBase,
                 PokedexEvolutions
-            ]
+            ],
+            url: "https://pokedex-react-steel.vercel.app/"
         },
     ]
 
@@ -95,6 +98,7 @@ export default function ModalProject({ id, setShowModal }) {
                             <p>This projects was development by me, using the next technologies.
                                 Basiccaly is a library with system of crud when the user can create,
                                 read, update and delete info of books in localhost, it has conection with nodeJs basic</p>
+                            <a href={projectJson[id].url}></a>
                             <ul className='tecs'>
                                 {projectJson[id].tecs.map((e, i) => (
                                     <li key={i}>{e}</li>
