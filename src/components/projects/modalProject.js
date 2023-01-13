@@ -99,7 +99,7 @@ export default function ModalProject({ id, setShowModal }) {
                         </div>
                         <div className='detail'>
                             <p>{projectJson[id].description}</p>
-                            <a href={projectJson[id].url} style={{color:'#fff'}}>View page</a>
+                            <a href={projectJson[id].url} target='_BLANK' style={{color:'#fff'}}>View page</a>
                             <ul className='tecs'>
                                 {projectJson[id].tecs.map((e, i) => (
                                     <li key={i}>{e}</li>
