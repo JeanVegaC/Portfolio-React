@@ -98,7 +98,7 @@ export default function ModalProject({ id, setShowModal }) {
                             <p>This projects was development by me, using the next technologies.
                                 Basiccaly is a library with system of crud when the user can create,
                                 read, update and delete info of books in localhost, it has conection with nodeJs basic</p>
-                            <a href={projectJson[id].url}></a>
+                            <a href={projectJson[id].url}>View page</a>
                             <ul className='tecs'>
                                 {projectJson[id].tecs.map((e, i) => (
                                     <li key={i}>{e}</li>
