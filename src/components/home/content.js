@@ -87,7 +87,7 @@ export default function Content() {
                         <a href={Cv}>Download CV</a>
                     </div>
                     <div className="btn-contact">
-                        <a>Contact me</a>
+                        <a href="#contact">Contact me</a>
                     </div>
                 </div>
             </div>
