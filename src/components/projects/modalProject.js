@@ -37,7 +37,8 @@ export default function ModalProject({ id, setShowModal }) {
             images: [LibraryLogin,
                 LibrarySearch,
                 LibraryCrud],
-            url: "https://biblioteca-react-nu.vercel.app/"
+            url: "https://biblioteca-react-nu.vercel.app/",
+            description: 'This projects was development by me, using the next technologies. Basiccaly is a library with system of crud where the user can create, read, update and delete info of books in localhost, it has conection with nodeJs basic'
         },
         {
             id: 2,
@@ -53,7 +54,8 @@ export default function ModalProject({ id, setShowModal }) {
                 AnimeEmision,
                 AnimeNotices,
                 AnimePresentation],
-            url: "https://page-anime-ajax.vercel.app/"
+            url: "https://page-anime-ajax.vercel.app/",
+            description: 'This projects was development by me, using the next technologies. Basiccaly is a anime page where you can watch anime and can create, read, update and delete animes favorites in localhost, it has conection with nodeJs basic' 
         },
         {
             id: 3,
@@ -72,7 +74,8 @@ export default function ModalProject({ id, setShowModal }) {
                 PokedexBase,
                 PokedexEvolutions
             ],
-            url: "https://pokedex-react-steel.vercel.app/"
+            url: "https://pokedex-react-steel.vercel.app/",
+            description: 'This projects was development by me, using the next technologies. Basiccaly is a pokedex where you can watch info of pokemons, also can you watch your about, level, evolutions, etc'
         },
     ]
 
@@ -95,10 +98,8 @@ export default function ModalProject({ id, setShowModal }) {
                             <img src={projectJson[id].img}></img>
                         </div>
                         <div className='detail'>
-                            <p>This projects was development by me, using the next technologies.
-                                Basiccaly is a library with system of crud when the user can create,
-                                read, update and delete info of books in localhost, it has conection with nodeJs basic</p>
-                            <a href={projectJson[id].url}>View page</a>
+                            <p>{projectJson[id}.description}</p>
+                            <a href={projectJson[id].url} style={{color:'#fff'}}>View page</a>
                             <ul className='tecs'>
                                 {projectJson[id].tecs.map((e, i) => (
                                     <li key={i}>{e}</li>
