@@ -98,7 +98,7 @@ export default function ModalProject({ id, setShowModal }) {
                             <img src={projectJson[id].img}></img>
                         </div>
                         <div className='detail'>
-                            <p>{projectJson[id}.description}</p>
+                            <p>{projectJson[id].description}</p>
                             <a href={projectJson[id].url} style={{color:'#fff'}}>View page</a>
                             <ul className='tecs'>
                                 {projectJson[id].tecs.map((e, i) => (
